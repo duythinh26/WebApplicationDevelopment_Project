@@ -1,5 +1,9 @@
+import Homepage from "./pages/Homepage"
+import Navbar from "./pages/Navbar";
+
+
 const App = () => {
-    return <div>Hello world!</div>;
+    return <Navbar/>
   };
   
   export default App;
