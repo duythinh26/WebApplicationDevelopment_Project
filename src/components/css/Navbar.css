@@ -5,11 +5,11 @@
 }
 
 /* Class and other css */
-.navbar--container {
+.navbar__container {
     height: 60px;
 }
 
-.navbar--wrapper {
+.navbar__wrapper {
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -31,12 +31,12 @@
     justify-content: flex-end;
 }
 
-.navbar--language {
+.navbar__language {
     font-size: 14px;
     cursor: pointer;
 }
 
-.navbar--search-container {
+.navbar__search-container {
     border: 0.5px solid lightgray;
     display: flex;
     align-items: center;
@@ -44,15 +44,15 @@
     padding: 5px;
 }
 
-.navbar--search-input {
+.navbar__search-input {
     border: none;
 }
 
-.navbar--logo {
+.navbar__logo {
     font-weight: normal;
 }
 
-.navbar--menu-item {
+.navbar__menu-item {
     font-style: 14px;
     cursor: pointer;
     margin-left: 50px;
