@@ -1,9 +1,8 @@
 import Homepage from "./pages/Homepage"
-import Navbar from "./pages/Navbar";
 
 
 const App = () => {
-    return <Navbar/>
+    return <Homepage/>
   };
   
   export default App;
