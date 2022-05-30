@@ -13,15 +13,15 @@ const Navbar = () => {
                     <div className="navbar--language">EN</div>
                     <div className="navbar--search-container">
                         <input className="navbar--search-input"/>
-                        <Search style={{ color: "gray", fontSize: 16}}></Search>
+                        <Search style={{ color: "black", fontSize: 16}}></Search>
                     </div>
                 </div>
                 <div className="one-three navbar--center">
                     <h1 className="navbar--logo">Daki Shop</h1>
                 </div>
                 <div className="one-three navbar--right">
-                    <div className="navbar--menu-item">Register</div>
                     <div className="navbar--menu-item">Sign In</div>
+                    <div className="navbar--menu-item">Register</div>
                     <div className="navbar--menu-item">
                         <Badge bagdeContent={2} color="primary">
                             <ShoppingCartOutlined />
