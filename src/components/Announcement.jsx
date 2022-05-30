@@ -1,10 +1,9 @@
-import react from 'react'
 import "./css/Announcement.css"
 
 const Announcement = () => {
   return (
     <div className='announcement__container'>
-        Super Deal! Free Shipping on Orders over $50!
+        6 June. Mid-year sale. Freeship on order over $50. Buy now!!!
     </div>
   )
 }
