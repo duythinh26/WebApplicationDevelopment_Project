@@ -1,8 +1,6 @@
-import react from "react";
-import styledComponents from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
-import "../css/Navbar.css"
+import "./css/Navbar.css"
 
 
 const Navbar = () => {
