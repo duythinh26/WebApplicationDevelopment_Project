@@ -1,0 +1,39 @@
+.category-item__container {
+    flex: 1;
+    margin: 5px;
+    height: 70vh;
+    position: relative;
+}
+
+.category-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-item__info-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info__title {
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+
+.info__button {
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    color: gray;
+    cursor: pointer;
+    font-weight: normal;
+}
