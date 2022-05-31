@@ -10,6 +10,10 @@
     position: relative;
 }
 
+.product__container:hover {
+    opacity: 1;
+}
+
 .product__img {
     height: 75%;
     z-index: 2;
@@ -26,6 +30,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+}
+
+.product__info:hover {
+    opacity: 1;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .product__icon {
