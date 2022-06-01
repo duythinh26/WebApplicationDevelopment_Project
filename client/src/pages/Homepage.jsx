@@ -5,6 +5,7 @@ import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
 import News from "../components/News";
+import Footer from "../components/Footer";
 
 const Homepage = () => {
     return (
@@ -15,6 +16,7 @@ const Homepage = () => {
             <Categories/>
             <Products/>
             <News/>
+            <Footer/>
         </div>
     )
 }
