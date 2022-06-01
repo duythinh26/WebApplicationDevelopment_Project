@@ -1,7 +1,7 @@
 .product__container {
     flex: 1;
     margin: 5px;
-    min-width: 280px;  
+    min-width: 25%;  
     height: 350px;
     display: flex;
     align-items: center;
