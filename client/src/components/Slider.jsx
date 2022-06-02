@@ -58,7 +58,7 @@ const Slider = () => {
             {sliderItems.map((item) => (
                 <Slide bg = {item.bg} key = {item.id}>
                 <div className="slider__img-container">
-                    <img className='slider__img' src={item.img} alt="" />
+                    <img className='slider__img' src={ item.img } alt="" />
                 </div>
                 <div className="slider__info-container">
                     <h1 className="info-title">{item.title}</h1>

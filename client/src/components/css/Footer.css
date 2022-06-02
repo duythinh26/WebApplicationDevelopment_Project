@@ -50,6 +50,6 @@
     align-items: center;
 }
 
-img {
+.payment__img {
     width: 50%;
 }

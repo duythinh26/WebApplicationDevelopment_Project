@@ -29,7 +29,7 @@
     flex-wrap: wrap;
 }
 
-input { 
+.register__input { 
     flex: 1;
     min-width: 40%;
     margin: 20px 10px 0px 0px;
@@ -42,7 +42,7 @@ input {
 }
 
 .create-account {
-    width: 40%;
+    width: 100%;
     border: none;
     padding: 15px 20px;
     background-color: teal;

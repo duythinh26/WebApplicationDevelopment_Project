@@ -28,7 +28,7 @@
     border: 1px solid lightgray;
 }
 
-input {
+.email__input {
     border: none;
     flex: 8;
     padding-left: 20px;

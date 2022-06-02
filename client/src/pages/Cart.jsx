@@ -49,7 +49,7 @@ const Cart = () => {
                 <div className="bottom__info">
                     <div className="bottom__product">
                         <div className="bottom__product-detail">
-                            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" alt="" />
+                            <img className='product__img' src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" alt="" />
                             <div id="detail">
                                 <span>JESSIE THUNDER SHOES</span>
                                 <span><b>ID:</b> 93813718293</span>
@@ -68,7 +68,7 @@ const Cart = () => {
                     </div>
                     <div className="bottom__product">
                         <div className="bottom__product-detail">
-                            <img src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" alt="" />
+                            <img className='cart__product--img' src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" alt="" />
                             <div id="detail">
                                 <span>HAKURA T-SHIRT</span>
                                 <span><b>ID:</b> 93813718295</span>

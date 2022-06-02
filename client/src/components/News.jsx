@@ -8,7 +8,7 @@ const News = () => {
         <h1 className="news__title">News</h1>
         <div className="news__desc">Get timely updates from your favorite products.</div>
         <div className="news__input-container">
-            <input type="text" placeholder='Your email' />
+            <input className='email__input' type="text" placeholder='Your email' />
             <button className="input__button">
                 <Send/>
             </button>

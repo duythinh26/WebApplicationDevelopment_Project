@@ -65,7 +65,7 @@ const Footer = () => {
             <div className="contact__item">
                 <MailOutline style={{marginRight:"10px"}}/>daki.shop@contact
             </div>
-            <img src="https://i.ibb.co/Qfvn4z6/payment.png" />
+            <img className='payment__img' src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </div>
     </div>
   )

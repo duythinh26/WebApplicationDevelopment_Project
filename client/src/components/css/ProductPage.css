@@ -7,7 +7,7 @@
     flex: 1;
 }
 
-.product__img {
+.productpage__img {
     width: 100%;
     height: 90vh;
     object-fit: cover;
@@ -38,7 +38,7 @@
     justify-content: space-between;
 }
 
-.filter {
+.product__filter {
     display: flex;
     align-items: center;
 }

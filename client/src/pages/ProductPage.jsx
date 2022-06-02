@@ -23,7 +23,7 @@ const ProductPage = () => {
       <Navbar/>
       <div className="product-page__wrapper">
         <div className="img__container">
-          <img className='product__img' src="https://i.ibb.co/S6qMxwr/jean.jpg" alt="" />
+          <img className='productpage__img' src="https://i.ibb.co/S6qMxwr/jean.jpg" alt="" />
         </div>
          <div className="info__container">
           <h1 className="product__info-title">
@@ -38,13 +38,13 @@ const ProductPage = () => {
           </p>
           <span className="price">$30</span>
           <div className="filter__container">
-            <div className="filter">
+            <div className="product__filter">
               <span className="filter__title">Color</span>
               <FilterColor color='black'></FilterColor>
               <FilterColor color='darkblue'></FilterColor>
               <FilterColor color='gray'></FilterColor>
             </div>
-            <div className="filter">
+            <div className="product__filter">
               <span className="filter__title">Size</span>
               <select name="" id="" className="filter__size">
                 <option value="">XS</option>
