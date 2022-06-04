@@ -23,15 +23,15 @@ router.post("/register", async (req, res) => {
 });
 
 // Login API
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const user = await User.findOne(
             {
-                userName: req.body.username
+                username: req.body.username
             }
         );
 
-        !user && res.status(401).json("Wrong username!")
+        !user && res.status(401).json("Wrong User Name");
 
         const hashedPassword = CryptoJS.AES.decrypt(
             user.password,
@@ -39,21 +39,25 @@ router.post("/login", async (req, res) => {
         );
 
         const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
-        originalPassword !== req.body.password && res.status(401).json("Wrong password!");
 
-        const accessToken = jwt.sign({
+        const inputPassword = req.body.password;
+        
+        originalPassword != inputPassword && 
+            res.status(401).json("Wrong Password");
+
+        const accessToken = jwt.sign(
+        {
             id: user._id,
             isAdmin: user.isAdmin,
-
-        }, process.env.JWT_SEC,
-        { expiresIn: "3d" }
+        },
+        process.env.JWT_SEC,
+            { expiresIn:"3d" }
         );
-
-        const { password, ...others } = user._doc;
-
+  
+        const { password, ...others } = user._doc;  
         res.status(200).json({ ...others, accessToken });
 
-    }catch(err){
+    } catch (err) {
         res.status(500).json(err);
     }
 });
