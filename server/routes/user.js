@@ -5,29 +5,32 @@ const {
     verifyTokenAndAdmin,
 } = require("./verifyToken");
 
-const { verifyToken } = require("./verifyToken");
-
-const CryptoJS = require("crypto-js");
 const router = require("express").Router();
 
-//UPDATE
-router.put("/:id", verifyTokenAndAuthorization, async (req,res)=>{
-    if(req.body.password) {
-        req.body.password = CryptoJS.AES.encrypt(req.body.password, process.env.PASS_SEC).toString();
+//Update API
+router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
+    if (req.body.password) {
+        req.body.password = CryptoJS.AES.encrypt(
+            req.body.password,
+            process.env.PASS_SEC
+        ).toString();
     }
 
-    try{
-        const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-            $set: req.body
-        }, {new:true});
+    try {
+        const updatedUser = await User.findByIdAndUpdate(
+            req.params.id,
+            {
+                $set: req.body,
+            },
+            { new: true }
+        );
         res.status(200).json(updatedUser);
-    }catch (err){
+    } catch (err) {
         res.status(500).json(err);
     }
 });
 
-//DELETE
-
+// Delete API
 router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     try {
         await User.findByIdAndDelete(req.params.id);
@@ -37,7 +40,7 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     }
 });
 
-//GET USER
+// Get user
 router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
@@ -48,7 +51,7 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     }
 });
 
-//GET ALL USER
+// Get all users
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
     const query = req.query.new;
     try {
@@ -61,12 +64,11 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
     }
 });
 
-//GET USER STATS
-
+// Get user stats
 router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
     const date = new Date();
     const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
-
+    
     try {
         const data = await User.aggregate([
             { $match: { createdAt: { $gte: lastYear } } },
@@ -82,7 +84,7 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
                 },
             },
         ]);
-        res.status(200).json(data)
+        res.status(200).json(data); 
     } catch (err) {
         res.status(500).json(err);
     }
