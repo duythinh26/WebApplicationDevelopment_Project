@@ -1,6 +1,5 @@
 import React from 'react'
 import "./css/CategoryItem.css"
-import { styled } from '@material-ui/core'
 
 const CategoryItem = ({item}) => {
   return (
