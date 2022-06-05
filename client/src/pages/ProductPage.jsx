@@ -37,7 +37,7 @@ const ProductPage = () => {
             condimentum ac, volutpat ornare.
           </p>
           <span className="price">$30</span>
-          <div className="filter__container">
+          <div className="product--filter__container">
             <div className="product__filter">
               <span className="filter__title">Color</span>
               <FilterColor color='black'></FilterColor>
