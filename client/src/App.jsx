@@ -7,28 +7,25 @@ import Cart from "./pages/Cart";
 import React from "react";
 import Success from "./pages/Success";
 import {
-    BrowserRouter,
+    BrowserRouter as Router,
     Route,
     Navigate,
     Routes,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const App = () => {
-    const user = useSelector((state) => state.user.currentUser);
-
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
-                <Route path="/home" element = { <Homepage/> }/>
+                <Route path="/" element = { <Homepage/> }/>
                 <Route path="/products/:category" element = { <ProductListPage/> }/>
                 <Route path="/product/:id" element = { <ProductPage/> }/>
                 <Route path="/cart" element = { <Cart/> }/>
                 <Route path="/register" element = { <RegisterPage/> }/>
                 <Route path="/login" element = { <LoginPage/> }/>
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
-};
+}
   
 export default App;
