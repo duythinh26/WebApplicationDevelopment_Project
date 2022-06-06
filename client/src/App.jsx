@@ -1,5 +1,5 @@
 import Homepage from "./pages/Homepage";
-import ProductListPage from "./pages/ProductListPage";
+import ProductListPage from "./pages/ProductList";
 import ProductPage from "./pages/ProductPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";

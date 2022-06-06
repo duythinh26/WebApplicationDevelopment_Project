@@ -1,6 +1,6 @@
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import { Badge } from "@material-ui/core";
-import "./css/Navbar.css"
+import Badge from '@mui/material/Badge';
+import "./css/Navbar.css";
 
 
 const Navbar = () => {
