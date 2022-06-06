@@ -10,8 +10,8 @@ const LoginPage = () => {
           <input className='login__input' type="text" placeholder='Username'/>
           <input className='login__input' type="password" placeholder='Password'/>
           <button className="login__button">Login</button>
-          <a href="#">Forgot Password?</a>
-          <a href="#">Create new account</a>
+          <a className='account-reback' href="">Forgot Password?</a>
+          <a className='account-reback' href="">Create new account</a>
         </form>
       </div>
     </div>
