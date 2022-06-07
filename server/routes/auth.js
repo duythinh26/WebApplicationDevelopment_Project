@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
             isAdmin: user.isAdmin,
         },
         process.env.JWT_SEC,
-            { expiresIn:"3d" }
+            { expiresIn: "5m" }
         );
   
         const { password, ...others } = user._doc;  
@@ -59,6 +59,32 @@ router.post('/login', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+const verify = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    if (authHeader) {
+        const token = authHeader.split(" ")[1];
+    
+        jwt.verify(token, "mySecretKey", (err, user) => {
+            if (err) {
+                return res.status(403).json("Token is not valid!");
+            }
+    
+            req.user = user;
+            next();
+        });
+    } else {
+        res.status(401).json("You are not authenticated!");
+    }
+};
+
+let refreshTokens = [];
+
+router.post("/api/logout", verify, (req, res) => {
+    const refreshToken = req.body.token;
+    refreshTokens = refreshTokens.filter((token) => token !== refreshToken);
+    res.status(200).json("You logged out successfully.");
 });
 
 module.exports = router;
