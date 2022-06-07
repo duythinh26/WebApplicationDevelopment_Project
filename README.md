@@ -1,7 +1,7 @@
 # e-commerce-website
 E-commerce website 
 
-## Introduction\
+## Introduction
 DAKI TEAM
 Member:
 1. Phạm Duy Thịnh (FE, fix bugs)
@@ -9,6 +9,7 @@ Member:
 3. Huỳnh Quốc Bảo  (Database)
 
 Motivation
+
 updating...
 
 ### Skills Applied
@@ -26,16 +27,20 @@ API Testing: Postman.
 
 ### Diagrams
 Use case diagram:
+
 updating...
 
 UML:
+
 updating...
 
 ### Feature
 
-_ Login/ Register/ Logout.
-_ Shop management: Profile, Products, Orders.
-_ Product management: CRUD, Searching, Review.
+1. Login/ Register/ Logout.
+
+2. Shop management: Profile, Products, Orders.
+
+3. Product management: CRUD, Searching, Review.
 
 ### API Documentaion
 
