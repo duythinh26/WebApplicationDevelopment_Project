@@ -25,12 +25,16 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="one-three navbar--right">
-                    <div className="navbar__menu-item">Sign In</div>
-                    <div className="navbar__menu-item">Register</div>
-                    <Link to="/cart">
+                    <Link to="/login" className="link">
+                        <div className="navbar__menu-item">Sign In</div>
+                    </Link>
+                    <Link to="/register" className="link">
+                        <div className="navbar__menu-item">Register</div>
+                    </Link>
+                    <Link to="/cart" className="link">
                         <div className="navbar__menu-item">
                             <Badge badgeContent={ quantity } color="primary">
-                                <ShoppingCartOutlined />
+                                <ShoppingCartOutlined/>
                             </Badge>
                         </div>
                     </Link>
