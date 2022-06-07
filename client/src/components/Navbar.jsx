@@ -27,11 +27,13 @@ const Navbar = () => {
                 <div className="one-three navbar--right">
                     <div className="navbar__menu-item">Sign In</div>
                     <div className="navbar__menu-item">Register</div>
-                    <div className="navbar__menu-item">
-                        <Badge badgeContent={ quantity } color="primary">
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </div>
+                    <Link to="/cart">
+                        <div className="navbar__menu-item">
+                            <Badge badgeContent={ quantity } color="primary">
+                                <ShoppingCartOutlined />
+                            </Badge>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
