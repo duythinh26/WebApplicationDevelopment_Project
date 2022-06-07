@@ -46,6 +46,11 @@
     margin-bottom: 10px;
 }
 
+.login__button:disabled {
+    color: green;
+    cursor: not-allowed;
+}
+
 .account-reback {
     margin: 5px 0px;
     font-size: 12px;
