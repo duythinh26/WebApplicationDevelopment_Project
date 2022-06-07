@@ -5,17 +5,16 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import Cart from "./pages/Cart";
 import React from "react";
-import Success from "./pages/Success";
 import {
     BrowserRouter as Router,
     Route,
     Navigate,
     Routes,
 } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const App = () => {
-    const user = false;
+    const user = useSelector((state) => state.user.currentUser);
 
     return (
         <Router>
