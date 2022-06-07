@@ -50,10 +50,15 @@
 
 .navbar__logo {
     font-weight: normal;
+    color: #000;
 }
 
 .navbar__menu-item {
     font-style: 14px;
     cursor: pointer;
     margin-left: 50px;
+}
+
+.homepage {
+    text-decoration: none;
 }
