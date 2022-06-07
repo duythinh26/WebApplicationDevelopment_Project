@@ -1,7 +1,20 @@
 import React from 'react';
 import "./css/Product.css";
 import styledComponents from "styled-components";
+import { Link } from "react-router-dom";
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
+
+const Container = styledComponents.div`
+    flex: 1;
+    margin: 5px;
+    min-width: 25%;  
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5fbfd;
+    position: relative;
+`
 
 const Circle = styledComponents.div`
     width: 200px;
@@ -21,7 +34,9 @@ const Product = ({ item }) => {
                 <ShoppingCartOutlined/>
             </div>
             <div className="product__icon">
+                <Link to={`/product/${ item._id }`}>
                 <SearchOutlined/>
+                </Link>
             </div>
             <div className="product__icon">
                 <FavoriteBorderOutlined/>
