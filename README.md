@@ -4,7 +4,7 @@ E-commerce website
 ## YOUR TEAM
 DAKI TEAM
 Member:
-1. Phạm Duy Thịnh - 
+1. Phạm Duy Thịnh - ITITIU19215
 2. Đào Ngọc Linh  - ITITWE18031
 3. Huỳnh Quốc Bảo - ITITIU19082
 
