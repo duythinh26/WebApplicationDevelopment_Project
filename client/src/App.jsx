@@ -23,11 +23,8 @@ const App = () => {
                 <Route path="/products/:category" element = { <ProductListPage/> }/>
                 <Route path="/product/:id" element = { <ProductPage/> }/>
                 <Route path="/cart" element = { <Cart/> }/>
-                <Route path="/register" element = { user ? <Navigate to = "/"/> : <RegisterPage/> }>
-                </Route>
-                <Route path="/login" element = { user ? <Navigate to = "/"/> : <LoginPage/> }>
-
-                </Route>
+                <Route path="/register" element = { user ? <Navigate to = "/"/> : <RegisterPage/> }/>
+                <Route path="/login" element = { user ? <Navigate to = "/"/> : <LoginPage/> }/>
             </Routes>
         </Router>
     );
