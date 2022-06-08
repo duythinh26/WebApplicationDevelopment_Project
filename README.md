@@ -15,11 +15,13 @@ updating...
 ### Skills Applied
 Programming Languages: Javascript
 
-Front-end: React.JS, CSS, Redux
+Front-end: ReactJS, CSS, Redux, React-router-dom.
 
-Back-end: Node.JS, Express.JS
+Back-end: NodeJS, ExpressJS
 
 Database: MongoDB.
+
+Other technique: CryptoJS, Jsonwebtoken.
 
 IDE Tool: Visual Studio Code, IntelliJ IDEA.
 
@@ -36,11 +38,11 @@ updating...
 
 ### Feature
 
-1. Login/ Register/ Logout.
+1. Login/ Register.
 
 2. Shop management: Profile, Products, Orders.
 
-3. Product management: CRUD, Searching, Review.
+3. Product management: CRUD, Review.
 
 ### API Documentaion
 
