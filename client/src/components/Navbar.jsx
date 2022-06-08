@@ -31,6 +31,9 @@ const Navbar = () => {
                     <Link to="/register" className="link">
                         <div className="navbar__menu-item">Register</div>
                     </Link>
+                    <Link to="/logout" className="link">
+                        <div className="navbar__menu-item">Logout</div>
+                    </Link>
                     <Link to="/cart" className="link">
                         <div className="navbar__menu-item">
                             <Badge badgeContent={ quantity } color="primary">

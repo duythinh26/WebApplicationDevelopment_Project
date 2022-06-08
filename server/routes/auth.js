@@ -6,12 +6,12 @@ const jwt = require("jsonwebtoken");
 // Register API
 router.post("/register", async (req, res) => {
     const newUser = new User({
-      username: req.body.username,
-      email: req.body.email,
-      password: CryptoJS.AES.encrypt(
-        req.body.password,
-        process.env.PASS_SEC
-      ).toString(),
+        username: req.body.username,
+        email: req.body.email,
+        password: CryptoJS.AES.encrypt(
+            req.body.password,
+            process.env.PASS_SEC
+        ).toString(),
     });
 
     try {
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
             isAdmin: user.isAdmin,
         },
         process.env.JWT_SEC,
-            { expiresIn: "5m" }
+            { expiresIn: "3d" }
         );
   
         const { password, ...others } = user._doc;  
@@ -61,30 +61,9 @@ router.post('/login', async (req, res) => {
     }
 });
 
-const verify = (req, res, next) => {
-    const authHeader = req.headers.authorization;
-    if (authHeader) {
-        const token = authHeader.split(" ")[1];
-    
-        jwt.verify(token, "mySecretKey", (err, user) => {
-            if (err) {
-                return res.status(403).json("Token is not valid!");
-            }
-    
-            req.user = user;
-            next();
-        });
-    } else {
-        res.status(401).json("You are not authenticated!");
-    }
-};
-
-let refreshTokens = [];
-
-router.post("/api/logout", verify, (req, res) => {
-    const refreshToken = req.body.token;
-    refreshTokens = refreshTokens.filter((token) => token !== refreshToken);
-    res.status(200).json("You logged out successfully.");
+router.get("/logout", (req, res) => {
+    localStorage.removeItem('root')
+    res.redirect('/');
 });
 
 module.exports = router;

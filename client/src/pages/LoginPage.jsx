@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Error = styledComponents.span`
   color: red;
-`
+`;
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
