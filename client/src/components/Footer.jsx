@@ -1,137 +1,127 @@
-import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@material-ui/icons';
-import styledEngine from '@mui/styled-engine';
-import React from 'react';
 import styledComponents from 'styled-components';
-import "./css/Footer.css";
+import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from '@material-ui/icons';
+
+const Container = styledComponents.div`
+    display: flex;
+`;
+
+const Left = styledComponents.div`
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+`;
+
+const Logo = styledComponents.h1``;
+
+const Description = styledComponents.p`
+    margin: 20px 0px;
+`;
+
+const SocialContainer = styledComponents.div`
+    display: flex;
+`;
 
 const SocialIcon = styledComponents.div`
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    color: white;
+    color: #fff;
     background-color: #${(props) => props.color};
+    margin-right: 20px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
 `;
 
-const foot_container = styledComponents.div`
-    display: flex;
-`;
-
-const foot_container_left = styledComponents.div`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-`;
-
-const foot_desc = styledComponents.p`
-    margin: 20px 0px;
-
-`;
-
-const social__contain = styledComponents.div`
-    display: flex;
-
-`;
-
-const foot_contain_center = styledComponents.div`
-
+const Center = styledComponents.div`
     flex: 1;
     padding: 20px;
-
 `;
 
-const foot_title = styledComponents.h2`
+const Title = styledComponents.h2`
     margin-bottom: 30px;
-
 `;
 
-const foot_list = styledComponents.ul`
+const List = styledComponents.ul`
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-
 `;
 
-const foot_list_item = styledComponents.li`
+const ListItem = styledComponents.li`
     width: 50%;
     margin-bottom: 10px;
-
 `;
 
-const foot_contain_right = styledComponents.div`
+const Right = styledComponents.div`
     flex: 1;
     padding: 20px;
-
 `;
 
-const contact_item = styledComponents.div`
+const Contact = styledComponents.div`
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+`;
 
+const Payment = styledComponents.img`
+    width: 50%;
 `;
 
 const Footer = () => {
-  return (
-    <foot_container>
-        <foot_container_left>
-            <h1 className="footer__logo">Daki Shop</h1>
-            <foot_desc>
-                There are many variations of passages of Lorem Ipsum available, but
-                the majority have suffered alteration in some form, by injected
-                humour, or randomised words which don't look even slightly believable.
-            </foot_desc>
-            <social__contain>
-                <SocialIcon color='3B5999'>
-                    <Facebook style={{ cursor: "pointer" }}/>
-                </SocialIcon>
-                <SocialIcon color='E4405F'>
-                    <Instagram style={{ cursor: "pointer" }}/>
-                </SocialIcon>
-                <SocialIcon color='55ACEE'>
-                    <Twitter style={{ cursor: "pointer" }}/>
-                </SocialIcon>
-                <SocialIcon color='E60023'>
-                    <Pinterest style={{ cursor: "pointer" }}/>
-                </SocialIcon>
-            </social__contain>
-        </foot_container_left>
-        <foot_contain_center>
-            <foot_title>Useful Links</foot_title>
-            <foot_list>
-                <foot_list_item>Home</foot_list_item>
-                <foot_list_item>Cart</foot_list_item>
-                <foot_list_item>Man Fashion</foot_list_item>
-                <foot_list_item>Woman Fashion</foot_list_item>
-                <foot_list_item>Accessories</foot_list_item>
-                <foot_list_item>My Account</foot_list_item>
-                <foot_list_item>Order Tracking</foot_list_item>
-                <foot_list_item>Wishlist</foot_list_item>
-                <foot_list_item>Terms</foot_list_item>
-            </foot_list>
-        </foot_contain_center>
-        <foot_contain_right>
-            <foot_title>Contact</foot_title>
-            <contact_item>
-                <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
-            </contact_item>
-            <contact_item>
-                <Phone style={{marginRight:"10px"}}/> +1 234 567 890
-            </contact_item>
-            <contact_item>
-                <MailOutline style={{marginRight:"10px"}}/>daki.shop@contact
-            </contact_item>
-            <img className='payment__img' src="https://i.ibb.co/Qfvn4z6/payment.png" alt='payment method'/>
-        </foot_contain_right>
-    </foot_container>
-  )
+    return (
+        <Container>
+            <Left>
+                <Logo>Daki Shop</Logo>
+                <Description>
+                    There are many variations of passages of Lorem Ipsum available, but
+                    the majority have suffered alteration in some form, by injected
+                    humour, or randomised words which don't look even slightly believable.
+                </Description>
+                <SocialContainer>
+                    <SocialIcon color='3B5999'>
+                        <Facebook style={{ cursor: "pointer" }}/>
+                    </SocialIcon>
+                    <SocialIcon color='E4405F'>
+                        <Instagram style={{ cursor: "pointer" }}/>
+                    </SocialIcon>
+                    <SocialIcon color='55ACEE'>
+                        <Twitter style={{ cursor: "pointer" }}/>
+                    </SocialIcon>
+                </SocialContainer>
+            </Left>
+            <Center>
+                <Title>Useful Links</Title>
+                <List>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Cart</ListItem>
+                    <ListItem>Man Fashion</ListItem>
+                    <ListItem>Woman Fashion</ListItem>
+                    <ListItem>Accessories</ListItem>
+                    <ListItem>My Account</ListItem>
+                    <ListItem>Order Tracking</ListItem>
+                    <ListItem>Wishlist</ListItem>
+                    <ListItem>Terms</ListItem>
+                </List>
+            </Center>
+            <Right>
+                <Title>Contact</Title>
+                <Contact>
+                    <Room style={{ marginRight:"10px" }}/> International University VNU-HCMC
+                </Contact>
+                <Contact>
+                    <Phone style={{ marginRight:"10px" }}/> +1 234 567 890
+                </Contact>
+                <Contact>
+                    <MailOutline style={{ marginRight:"10px" }}/>daki.shop@contact
+                </Contact>
+                <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" alt='payment method'/>
+            </Right>
+        </Container>
+    )
 }
 
-export default Footer
+export default Footer;
