@@ -76,7 +76,7 @@ USE CASE DIAGRAM:
 
 updating...
 
-### Feature
+### FEATURES
 
 1. Login/ Register.
 
@@ -85,6 +85,21 @@ updating...
 3. Product management: CRUD, Review.
 
 ### API Documentaion
+
+/register
+/login
+/cart/ (create cart)
+/cart/:id (Update,delete cart)
+/cart/find/:userId (get user cart)
+/order/ (create order)
+/order/:id (Update, delete order)
+/order/find/:userId (get user order)
+/product/ (create product)
+/product/:id (Update, delete product)
+/product/find/:id (get product)
+/user/:id (update, delete user)
+/user/find/:id (get user)
+
 
 ### Challenges in the project.
 With a E-commerce website, the most hardest part is the back-end. Because you do not need an catchy or colorful website to attract customer, of course it still important but not the most one. If your website has a thousand people visit every day, and the back-end not safe enough, there will has a lot of risk (bad security, hacker, leaking customer information,...).
