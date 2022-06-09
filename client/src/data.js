@@ -31,14 +31,14 @@ export const categories = [
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://cdn.runningshoesguru.com/wp-content/uploads/2020/02/running-shoes-reviews.jpg",
     title: "SHOES LOVE",
     cat: "shoes"
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    title: "TROUSERS MAGIC",
+    img: "https://www.realmenrealstyle.com/wp-content/uploads/2021/11/odd-trousers-and-suit-pants.jpg",
+    title: "TROUSERS",
     cat: "trouser"
   },
 ];
