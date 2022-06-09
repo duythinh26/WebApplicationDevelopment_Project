@@ -1,9 +1,7 @@
-import React from 'react';
-import { Send } from '@material-ui/icons';
-import "./css/News.css"
 import styledComponents from 'styled-components';
+import { Send } from '@material-ui/icons';
 
-const news_contain = styledComponents.div`
+const Container = styledComponents.div`
     height: 60vh;
     background-color: #fcf5f5;
     display: flex;
@@ -13,27 +11,30 @@ const news_contain = styledComponents.div`
 `;
 
 const Title = styledComponents.h1`
-
     font-size: 50px;
     font-weight: normal;
     margin-bottom: 20px;
 `;
 
-const Desc = styledComponents.div`
+const Description = styledComponents.div`
     font-size: 20px;
     font-weight: 300px;
     margin-bottom: 20px;
-
 `;
 
-const input_contain = styledComponents.div`
+const InputContainer = styledComponents.div`
     width: 50%;
     height: 40px;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
+`;
 
+const Input = styledComponents.input`
+    padding-left: 20px; 
+    border: none;
+    flex: 7;
 `;
 
 const Button = styledComponents.button`
@@ -42,22 +43,21 @@ const Button = styledComponents.button`
     background-color: teal;
     color: #fff;
     cursor: pointer;
-
 `;
 
 const News = () => {
-  return (
-    <news_contain>
-        <Title>News</Title>
-        <Desc>Get timely updates from your favorite products.</Desc>
-        <input_contain>
-            <input className='email__input' type="text" placeholder='Your email' />
-            <Button>
-                <Send/>
-            </Button>
-        </input_contain>
-    </news_contain>
-  )
+    return (
+        <Container>
+            <Title>News</Title>
+            <Description>Get timely updates from your favorite products.</Description>
+            <InputContainer>
+                <Input type="text" placeholder='Your email' />
+                <Button>
+                    <Send/>
+                </Button>
+            </InputContainer>
+        </Container>
+    )
 }
 
 export default News;

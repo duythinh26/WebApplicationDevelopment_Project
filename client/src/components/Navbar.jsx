@@ -76,7 +76,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center className="one-three">
-                    <Link to={ "/" } className = "homepage" >
+                    <Link to={ "/" } className = "homepage">
                         <Logo>Daki Shop</Logo>
                     </Link>
                 </Center>
