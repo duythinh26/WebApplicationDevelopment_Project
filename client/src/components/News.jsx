@@ -28,7 +28,7 @@ const InputContainer = styledComponents.div`
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    border: 1px solid lightgray;
+    border: 1px solid #D3D3D3;
 `;
 
 const Input = styledComponents.input`
@@ -40,7 +40,7 @@ const Input = styledComponents.input`
 const Button = styledComponents.button`
     flex: 1;
     border: none;
-    background-color: teal;
+    background-color: #008080;
     color: #fff;
     cursor: pointer;
 `;
