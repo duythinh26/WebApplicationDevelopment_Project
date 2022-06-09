@@ -1,0 +1,14 @@
+/* Navbar components css */
+.one-three {
+    width: 33.3% 
+    /* Can use flex: 1; instead of width: 33.3% */
+}
+
+.homepage {
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
