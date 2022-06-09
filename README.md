@@ -19,6 +19,7 @@ Ecommerce stands for “electronic commerce.” Ecommerce websites are built to 
 - The ecommerce website sends the payment information through a payment processor that validates the payment and collects the funds.
 - The seller then ships the order to the customer or sends the digital product immediately via email.
 ![alt text] (https://imgur.com/KnRnVSS)
+![img](https://imgur.com/KnRnVSS)
 
 
 ## MOTIVATION
