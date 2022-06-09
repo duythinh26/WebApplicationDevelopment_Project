@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styledComponents from "styled-components";
-import { popularProducts } from "../data";
 import Product from './Product';
 import axios from "axios";
 
-// Style Components part
 const Container = styledComponents.div`
   padding: 20px;
   display: flex;

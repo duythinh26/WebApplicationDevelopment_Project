@@ -1,6 +1,6 @@
+import styledComponents from "styled-components";
 import { categories } from "../data";
 import CategoryItem from './CategoryItem';
-import styledComponents from "styled-components";
 
 const Container = styledComponents.div`
   padding: 20px;
