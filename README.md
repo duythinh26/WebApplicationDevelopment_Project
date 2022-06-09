@@ -18,8 +18,8 @@ Ecommerce stands for “electronic commerce.” Ecommerce websites are built to 
 - Following the website’s checkout process, the buyer provides the necessary payment and shipping information.
 - The ecommerce website sends the payment information through a payment processor that validates the payment and collects the funds.
 - The seller then ships the order to the customer or sends the digital product immediately via email.
-![alt text] (https://imgur.com/KnRnVSS)
-![](img/e-commerce-website.jpg)
+![](img/e-commerce-website-img.jpg)
+
 
 
 
@@ -48,11 +48,31 @@ IDE Tool: Visual Studio Code, IntelliJ IDEA.
 API Testing: Postman.
 
 ### Diagrams
-Use case diagram:
-
-updating...
 
 UML:
+![](img/uml.png)
+
+REGISTER DIAGRAM:
+![](img/register.png)
+
+LOGIN DIAGRAM:
+
+![](img/login.png)
+
+USE CASE DIAGRAM:
+
+  -Admin:
+  
+![](img/admin.png)
+
+  -Order:
+  
+![](img/order.png)
+
+  -Authentication:
+  
+![](img/authentication.png)
+
 
 updating...
 
