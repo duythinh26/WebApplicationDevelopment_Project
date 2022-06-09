@@ -23,26 +23,53 @@ const Circle = styledComponents.div`
     background-color: #fff;
     position: absolute;
 `
+const product_info = styledComponents.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+`;
+
+const Icon = styledComponents.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.5s ease;
+
+`;
 
 const Product = ({ item }) => {
   return (
-    <div className='product__container'>
+    <Container>
         <Circle/>
         <img className='product__img' src={item.img} alt="" />
-        <div className="product__info">
-            <div className="product__icon">
+        <product_info>
+            <Icon>
                 <ShoppingCartOutlined/>
-            </div>
-            <div className="product__icon">
+            </Icon>
+            <Icon>
                 <Link to={`/product/${ item._id }`}>
                 <SearchOutlined/>
                 </Link>
-            </div>
-            <div className="product__icon">
+            </Icon>
+            <Icon>
                 <FavoriteBorderOutlined/>
-            </div>
-        </div>
-    </div>
+            </Icon>
+        </product_info>
+    </Container>
   )
 }
 
