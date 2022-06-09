@@ -38,6 +38,40 @@ const Slide = styledComponents.div`
     background-color: #${(props) => props.bg};
 `;
 
+const img_contain = styledComponents.div`
+    height: 100%;
+    flex: 1;
+
+
+`;
+
+const info_contain = styledComponents.div`
+    flex: 1;
+    padding: 50px;
+
+`;
+
+const info_title = styledComponents.h1`
+    font-size: 50px;
+
+`;
+
+const info_desc = styledComponents.p`
+    margin: 50px 0px;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+`;
+
+const Button = styledComponents.h1`
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+`;
+
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
 
@@ -57,14 +91,14 @@ const Slider = () => {
         <Wrapper slideIndex = {slideIndex}>
             {sliderItems.map((item) => (
                 <Slide bg = {item.bg} key = {item.id}>
-                <div className="slider__img-container">
+                <img_contain>
                     <img className='slider__img' src={ item.img } alt="" />
-                </div>
-                <div className="slider__info-container">
-                    <h1 className="info-title">{item.title}</h1>
-                    <p className="info-desc">{item.desc}</p>
-                    <button className="info-button">Shopping now</button>
-                </div>
+                </img_contain>
+                <info_contain>
+                    <info_title>{item.title}</info_title>
+                    <info_desc>{item.desc}</info_desc>
+                    <Button>Shopping now</Button>
+                </info_contain>
             </Slide>
             ))}
         </Wrapper>
