@@ -73,8 +73,10 @@ USE CASE DIAGRAM:
   
 ![](img/authentication.png)
 
+ORDER SEQUENCE:
 
-updating...
+![](img/orders.png)
+
 
 ### FEATURES
 
@@ -105,6 +107,8 @@ updating...
 With a E-commerce website, the most hardest part is the back-end. Because you do not need an catchy or colorful website to attract customer, of course it still important but not the most one. If your website has a thousand people visit every day, and the back-end not safe enough, there will has a lot of risk (bad security, hacker, leaking customer information,...).
 
 ### Screenshots
+
+
 
 #### Client
 
