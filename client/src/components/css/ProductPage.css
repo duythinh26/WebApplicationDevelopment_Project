@@ -3,16 +3,6 @@
     display: flex;
 }
 
-.img__container {
-    flex: 1;
-}
-
-.productpage__img {
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-}
-
 .info__container {
     flex: 1;
     padding: 0px 50px;

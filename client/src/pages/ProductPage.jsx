@@ -11,6 +11,58 @@ import { publicRequest } from "../requestMethod";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 
+const Container = styledComponents.div``;
+
+const Wrapper = styledComponents.div`
+  padding: 50px;
+  display: flex;
+`;
+
+const ImgContainer = styledComponents.div`
+  flex: 1;
+`;
+
+const Image = styledComponents.img`
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+`;
+
+const InfoContainer = styledComponents.div`
+  flex: 1;
+  padding: 0px 50px;
+`;
+
+const Title = styledComponents.h1`
+  font-weight: 200;
+`;
+
+const Desc = styledComponents.p`
+  margin: 20px 0px;
+`;
+
+const Price = styledComponents.span`
+  font-weight: 100;
+  font-size: 40px;
+`;
+
+const FilterContainer = styledComponents.div`
+  width: 50%;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Filter = styledComponents.div`
+  display: flex;
+  align-items: center;
+`;
+
+const FilterTitle = styledComponents.span`
+  font-size: 20px;
+  font-weight: 200;
+`;
+
 const FilterColor = styledComponents.div`
   width: 20px;
   height: 20px;
@@ -20,8 +72,49 @@ const FilterColor = styledComponents.div`
   cursor: pointer;
 `;
 
-const ProductPage = () => {
+const FilterSize = styledComponents.select`
+  margin-left: 10px;
+  padding: 5px;
+`;
 
+const FilterSizeOption = styledComponents.option``;
+
+const AddContainer = styledComponents.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const AmountContainer = styledComponents.div`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+`;
+
+const Amount = styledComponents.span`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+`;
+
+const Button = styledComponents.button`
+  padding: 15px;
+  border: 2px solid teal;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 500;
+  &:hover {
+    background-color: #f8f4f4;
+  }
+`;
+
+const ProductPage = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
@@ -53,53 +146,48 @@ const ProductPage = () => {
       addProduct({ ...product, quantity, color, size })
     );
   };
-
   return (
-    <div className='product-page__container'>
-      <Announcement/>
-      <Navbar/>
-      <div className="product-page__wrapper">
-        <div className="img__container">
-          <img className='productpage__img' src={ product.img } alt="" />
-        </div>
-         <div className="info__container">
-          <h1 className="product__info-title">
-            { product.title } 
-          </h1>
-          <p className="info_desc">
-            { product.desc }
-          </p>
-          <span className="price">$ { product.price }</span>
-          <div className="product--filter__container">
-            <div className="product__filter">
-              <span className="filter__title">Color</span>
+    <Container>
+      <Navbar />
+      <Announcement />
+      <Wrapper>
+        <ImgContainer>
+          <Image src={product.img} />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>$ {product.price}</Price>
+          <FilterContainer>
+            <Filter>
+              <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
-                <FilterColor color={c} key={c} onClick={() => setColor(c)}/>
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
               ))}
-            </div>
-            <div className="product__filter">
-              <span className="filter__title">Size</span>
-              <select name="" id="" className="filter__size" onChange={(e) => setSize(e.target.value)}>
-              {product.size?.map((s) => (
-                  <option key={s}>{s}</option>
+            </Filter>
+            <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize onChange={(e) => setSize(e.target.value)}>
+                {product.size?.map((s) => (
+                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
                 ))}
-              </select>
-            </div>
-          </div>
-          <div className="add-to-cart__container">
-            <div className="amount__container">
-              <Remove style = {{ cursor: "pointer" }} onClick = {() => handleQuantity("dec")}/>
-              <span className="amount">{ quantity }</span>
-              <Add style = {{ cursor: "pointer" }} onClick = {() => handleQuantity("inc")}/>
-            </div>
-            <button className="add__button" onClick={handleClick}>Add to cart</button>
-          </div>
-        </div>
-      </div>
-      <News/>
-      <Footer/>
-    </div>
-  )
+              </FilterSize>
+            </Filter>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove onClick={() => handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity("inc")} />
+            </AmountContainer>
+            <Button onClick={handleClick}>ADD TO CART</Button>
+          </AddContainer>
+        </InfoContainer>
+      </Wrapper>
+      <News />
+      <Footer />
+    </Container>
+  );
 };
 
 export default ProductPage;
