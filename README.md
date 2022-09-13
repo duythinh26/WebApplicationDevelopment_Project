@@ -1,14 +1,14 @@
 # e-commerce-website
 E-commerce website 
 
-## YOUR TEAM
+## OUR TEAM
 DAKI TEAM
 Member:
 1. Phạm Duy Thịnh - ITITIU19215
 2. Đào Ngọc Linh  - ITITWE18031
 3. Huỳnh Quốc Bảo - ITITIU19082
 
-## YOUR TOPIC
+## OUR TOPIC
 E-COMMERCE WEBSITE
 
 Ecommerce stands for “electronic commerce.” Ecommerce websites are built to connect shoppers to products or services for trading online. On the most basic level, they provide everything we need for online shopping. They work like this:
